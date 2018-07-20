@@ -18,9 +18,7 @@ Print the answer to each test case in a new line.
  */
 public class MonkAndTheIslands {
 	public static void main(String[] args) throws Exception  {
-		{
-			System.out.println("hi");
-		}
+		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int t = Integer.parseInt(br.readLine());
 		StringBuilder sb = new StringBuilder();

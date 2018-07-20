@@ -40,23 +40,19 @@ public class DisjointSet {
 	}
 	
 	private Node findSet(Node node) {
-	    Node parent = node.parent;
-	    if(node == parent){
-	    	return parent;
-	    }else{
-	    	Node temp = node;
-	    	Node parentTemp = parent;
-	    	while(temp != parentTemp){
-	    		temp = node.parent;
-	    		parent = temp.parent;
-	    	}
-	    	node.parent = parent;
-	    }
-	    // node.parent = findSet(node.parent);
-		return parent;
-	}
+        Node parent = node.parent;
+        if (parent == node) {
+            return parent;
+        }
+        node.parent = findSet(node.parent);
+        return node.parent;
+    }
+
 	
 	public long findSet(long data) {
         return findSet(nodeMap.get(data)).data;
+    }
+	public Node findNode(long data) {
+        return findSet(nodeMap.get(data));
     }
 }

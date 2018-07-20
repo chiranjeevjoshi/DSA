@@ -50,7 +50,7 @@ public class K_Friends {
 		PrintWriter wr = new PrintWriter(System.out);
 		int T = Integer.parseInt(br.readLine().trim());
 		for (int t_i = 0; t_i < T; t_i++) {
-			int N = Integer.parseInt(br.readLine().trim());
+			String N = br.readLine();
 			String[] arr_S = br.readLine().split(" ");
 			List<Integer> list = new ArrayList<>();
 			for (int i_S = 0; i_S < arr_S.length; i_S++) {

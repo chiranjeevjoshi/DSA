@@ -3,7 +3,6 @@ package graph;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.util.StringTokenizer;
 /*
  * Given a graph consisting  nodes (labelled  to ) where a specific given node  represents the starting position  and an edge between two nodes is of a given length, which may or may not be equal to other lengths in the graph.
@@ -37,7 +36,6 @@ For unreachable nodes, print .
  */
 public class Dijkstra_ShortestReach {
 	
-	static PrintWriter out = new PrintWriter(System.out);
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st = new StringTokenizer("");
     
