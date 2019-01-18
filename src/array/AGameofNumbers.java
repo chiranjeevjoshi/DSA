@@ -51,4 +51,6 @@ public class AGameofNumbers {
 		}
 		System.out.println(sb);
 	}
+	
+	
 }

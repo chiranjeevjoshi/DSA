@@ -31,7 +31,6 @@ public class LRUCache {
             setHead(n);
             return n.value;
         }
- 
         return -1;
     }
  
@@ -41,24 +40,19 @@ public class LRUCache {
         }else{
             head = n.next;
         }
- 
         if(n.next!=null){
             n.next.pre = n.pre;
         }else{
             end = n.pre;
         }
- 
     }
  
     public void setHead(Node n){
         n.next = head;
         n.pre = null;
- 
         if(head!=null)
             head.pre = n;
- 
         head = n;
- 
         if(end ==null)
             end = head;
     }
@@ -74,12 +68,8 @@ public class LRUCache {
             if(map.size()>=capacity){
                 map.remove(end.key);
                 remove(end);
-                setHead(created);
- 
-            }else{
-                setHead(created);
-            }    
- 
+            }
+            setHead(created);
             map.put(key, created);
         }
     }
